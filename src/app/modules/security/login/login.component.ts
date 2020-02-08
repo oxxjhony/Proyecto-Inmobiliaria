@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   fgValidationBuilder(){
     this.fgValidation=this.fb.group({
-      username:['',[Validators.required,Validators.maxLength(30),Validators.minLength(8)]],
+      username:['',[Validators.required,Validators.maxLength(30),Validators.minLength(8),Validators.email]],
       password:['',[Validators.required,Validators.minLength(5),Validators.maxLength(15)]]
     });
   }
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
   loginEvent(){
     if(this.fgValidation.invalid){
-       alert(" invalid data ");
+      
     }
     else{
       let u =this.fg.username.value;
