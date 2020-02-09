@@ -19,9 +19,9 @@ export class NavbarComponent implements OnInit {
     var nuv = document.getElementById('nuv');
     window.onscroll = function() {
     if (window.pageYOffset >50) {
-      nuv.classList.add("black");
+      nuv.classList.add("white");
     } else {
-      nuv.classList.remove("black");
+      nuv.classList.remove("white");
     }
   }
     }

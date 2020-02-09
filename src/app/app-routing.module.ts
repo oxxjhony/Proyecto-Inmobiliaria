@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './public/home/home.component';
 import { PageNotFoundComponent } from './public/page-not-found/page-not-found.component';
+import { MiViComponent } from './public/QuienesSomos/mi-vi/mi-vi.component';
 
 
 const routes: Routes = [
@@ -10,10 +11,15 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
+    path:'MiVi',
+    component:MiViComponent
+  },
+  {
     path: '',
     pathMatch:'full',
     redirectTo:'/home'
   },
+ 
   {
     path:'security',
     loadChildren:'./modules/security/security.module#SecurityModule'

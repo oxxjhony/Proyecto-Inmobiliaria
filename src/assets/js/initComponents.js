@@ -30,4 +30,8 @@ function initMaterializeSelect(){
     });
   });
 
+  
+  var instance = M.Carousel.init({
+    fullWidth: true
+  });
 

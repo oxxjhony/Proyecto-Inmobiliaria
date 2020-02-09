@@ -8,6 +8,7 @@ import { HeroComponent } from './public/master-page/hero/hero.component';
 import { HomeComponent } from './public/home/home.component';
 import { FooterComponent } from './public/master-page/footer/footer.component';
 import { PageNotFoundComponent } from './public/page-not-found/page-not-found.component';
+import { MiViComponent } from './public/QuienesSomos/mi-vi/mi-vi.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PageNotFoundComponent } from './public/page-not-found/page-not-found.co
     HeroComponent,
     HomeComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MiViComponent
   ],
   imports: [
     BrowserModule,
