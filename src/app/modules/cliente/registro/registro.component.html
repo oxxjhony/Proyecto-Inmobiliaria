@@ -1,1 +1,61 @@
-<p>registro works!</p>
+<div class="container">
+    <fieldset>
+        <legend>Register Form</legend>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Apellido</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Correo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="password" type="password" class="validate">
+                        <label for="password">contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phone_iphone</i>
+                        <input id="telefono" type="text" class="validate">
+                        <label for="telefono">telefono</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">store_mall_directory</i>
+                        <input id="direccion" type="text" class="validate">
+                        <label for="direccion">direccion</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">landscape</i>
+                        <input id="ciudad" type="text" class="validate">
+                        <label for="ciudad">ciudad</label>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="input-field col s4">
+                    <button [disabled]="fg.username.errors || fg.password.errors" class="btn waves-effect waves-light brown col s12" type="submit">Registrar<i class="material-icons right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</div>
