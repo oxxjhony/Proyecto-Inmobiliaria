@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ClienteRoutingModule } from './cliente-routing.module';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [RegistroComponent],
   imports: [
     CommonModule,
     ClienteRoutingModule
