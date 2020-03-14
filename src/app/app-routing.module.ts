@@ -25,6 +25,10 @@ const routes: Routes = [
     loadChildren:'./modules/security/security.module#SecurityModule'
   },
   {
+    path:'admin',
+    loadChildren:'./modules/administrador/administrador.module#AdministradorModule'
+  },
+  {
     path:'**',
     component:PageNotFoundComponent
   }
