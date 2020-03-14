@@ -11,6 +11,8 @@ import { PageNotFoundComponent } from './public/page-not-found/page-not-found.co
 import { MiViComponent } from './public/QuienesSomos/mi-vi/mi-vi.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { MiViComponent } from './public/QuienesSomos/mi-vi/mi-vi.component';
     HomeComponent,
     FooterComponent,
     PageNotFoundComponent,
-    MiViComponent
+    MiViComponent,
+    
   ],
   imports: [
     BrowserModule,
