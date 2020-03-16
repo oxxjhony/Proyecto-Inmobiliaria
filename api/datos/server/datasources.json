@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "BaseDatos": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "datosMongodb",
+    "password": "",
+    "name": "BaseDatos",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
