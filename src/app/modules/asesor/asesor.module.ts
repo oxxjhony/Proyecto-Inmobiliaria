@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AsesorRoutingModule } from './asesor-routing.module';
 import { CrearInmuebleComponent } from './crear-inmueble/crear-inmueble.component';
@@ -13,7 +14,9 @@ import { InmueblesBajoCargoComponent } from './inmuebles-bajo-cargo/inmuebles-ba
   declarations: [CrearInmuebleComponent, EditarInmuebleComponent, EliminarInmuebleComponent, ListadoInmueblesEvaluarComponent, InmueblesBajoCargoComponent],
   imports: [
     CommonModule,
-    AsesorRoutingModule
-  ]
+    AsesorRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+    ]
 })
 export class AsesorModule { }

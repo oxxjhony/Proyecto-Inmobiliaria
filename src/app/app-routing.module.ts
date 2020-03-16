@@ -31,6 +31,11 @@ const routes: Routes = [
   {
     path:'**',
     component:PageNotFoundComponent
+  },
+
+  {
+    path:'asesor',
+    loadChildren:'./modules/asesor/asesor.module#AsesorModule'
   }
 
 ];

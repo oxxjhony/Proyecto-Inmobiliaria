@@ -1,1 +1,73 @@
-<p>crear-inmueble works!</p>
+<div class="row" class="body">
+    <fieldset>  
+      <form [formGroup]="formValidator"  class="col s12">
+          <div class="row">
+              <div class="input-field col s12">
+                  <input id="txtName" formControlName="departamento" type="text" class="validate">
+                  <label for="txtName">departamento</label>
+                  <div class="warning-validation" *ngIf="fv.departamento.errors  && (fv.departamento.dirty || fv.departamento.touched)">
+                      <strong *ngIf="fv.departamento.errors.required">Por favor, ingrese el departamento!</strong>
+                  </div>
+              </div>
+              <div class="input-field col s12">
+                  <input id="txtName" formControlName="ciudad" type="text" class="validate">
+                  <label for="txtName">ciudad </label>
+                  <div class="warning-validation" *ngIf="fv.ciudad.errors && (fv.ciudad.dirty || fv.ciudad.touched)">
+                      <strong *ngIf="fv.ciudad.errors.required">Por favor, digite la ciudad!</strong>
+                      
+                  </div>
+              </div>
+              <div class="input-field col s12">
+                  <input id="txtCode" formControlName="direccion" type="text" class="validate">
+                  <label for="txtCode">direccion</label>
+                  <div class="warning-validation" *ngIf="fv.direccion.errors  && (fv.direccion.dirty || fv.direccion.touched)">
+                      <strong *ngIf="fv.direccion.errors.required">Por favor, ingrese la dirección!</strong>
+                  </div>
+              </div>
+              <div class="input-field col s12">
+                  <input id="txtName" formControlName="valor" type="text" class="validate">
+                  <label for="txtName">valor </label>
+                  <div class="warning-validation" *ngIf="fv.valor.errors && (fv.valor.dirty || fv.valor.touched)">
+                      <strong *ngIf="fv.valor.errors.required">Por favor, ingrese el valor!</strong>
+                     
+                  </div>
+              </div>
+              <div class="input-field col s12">
+                  <input id="txtName" formControlName="tipoinmueble" type="text" class="validate">
+                  <label for="txtName">tipoinmueble</label>
+                  <div class="warning-validation" *ngIf="fv.contrasena.errors  && (fv.contrasena.dirty || fv.contrasena.touched)">
+                      <strong *ngIf="fv.contrasena.errors.required">Por favor, ingrese el tipo de inmueble!</strong>
+                  </div>
+              </div>
+
+              <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Tipo de oferta</option>
+                    <option value="1">Compra</option>
+                    <option value="2">Venta</option>
+                    <option value="3">Alquiler</option>
+                  </select>
+                <input id="txtName" formControlName="tipooferta" type="text" class="validate">
+                <label for="txtName">tipooferta</label>
+                <div class="warning-validation" *ngIf="fv.tipooferta.errors  && (fv.tipooferta.dirty || fv.tipooferta.touched)">
+                    <strong *ngIf="fv.tipooferta.errors.required">Por favor, ingrese el tipo de oferta!</strong>
+                </div>
+            </div>
+              
+           
+            
+              
+          </div>
+          <div class="row">
+              <div class="col s12">
+                  <button [disabled]="fv.nombresesor.errors || fv.cedula.errors || fv.contrasena.errors" class="btn waves-effect waves-light" type="submit"
+                      name="action">Registrar asesor
+  
+                      <i class="material-icons right">send</i>
+                  </button>
+              </div>
+          </div>
+      </form>
+  
+    </fieldset>
+  </div>
