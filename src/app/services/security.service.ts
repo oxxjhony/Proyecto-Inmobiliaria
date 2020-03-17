@@ -27,4 +27,11 @@ export class SecurityService {
      }
      return user;
   }
+  
+  registerUser(firstname:String,lastname:String,email:String,password:String,telefono:String,direccion:String){
+    this.userLogged=true;
+
+  }
+
 }
+ 

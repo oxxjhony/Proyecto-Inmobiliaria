@@ -1,20 +1,21 @@
-<nav class ="navbar change() bb" id="nuv">
+<nav class="navbar change() bb" id="nuv">
     <strong *ngIf="userLogged"> 
       {{userName}}
     </strong>
     <div class="nav-wrapper">
-     <a routerLink="/home" class="brand-logo" class="left">Hogar Colombia</a>
-      <a href="#" data-target="mobile-Inmu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li *ngIf="!userLogged"><a routerLink="/security/login">login</a></li>
-        <li *ngIf="userLogged"><a routerLink="/security/logout">logout</a></li>
-        
-      </ul>
-    </div>
-  </nav>
+        <a routerLink="/home" class="brand-logo" class="left">Hogar Colombia</a>
+        <a href="#" data-target="mobile-Inmu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li *ngIf="!userLogged"><a routerLink="/security/login">login</a></li>
+            <li *ngIf="userLogged"><a routerLink="/security/logout">logout</a></li>
+            <li *ngIf="!userLogged"><a routerLink="/cliente/registro">register</a> </li>
 
-  <ul class="sidenav" id="mobile-Inmu">
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-Inmu">
     <li *ngIf="!userLogged"><a routerLink="/security/login">login</a></li>
     <li *ngIf="userLogged"><a routerLink="/security/logout">logout</a></li>
-  </ul>
-  
+    <li *ngIf="!userLogged"><a routerLink="/cliente/registro">register</a> </li>
+</ul>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder,Validators} from '@angular/forms';
 import{Router}from'@angular/router';
-import{SecurityService}from'src/app/services/security.service';
+
 
 
 @Component({
@@ -10,44 +10,28 @@ import{SecurityService}from'src/app/services/security.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-
-  fgValidation:FormGroup;
-
-  constructor(private fb:FormBuilder, private secService:SecurityService,
-    
+  formValidator:FormGroup;
+  constructor(private fb:FormBuilder,
     private router:Router) { }
 
-
   ngOnInit() {
-    this.fgValidationBuilder();
-    this.loginEvent();
+    this.formGenerator();
+  }
+ 
+  get fv(){
+    return this.formValidator.controls;
   }
 
-  fgValidationBuilder(){
-    this.fgValidation=this.fb.group({
-      username:['',[Validators.required,Validators.maxLength(30),Validators.minLength(8),Validators.email]],
-      password:['',[Validators.required,Validators.minLength(5),Validators.maxLength(15)]]
+  
+  formGenerator() {
+    this.formValidator = this.fb.group({
+      firstName: ['', [Validators.required, Validators.minLength(4)]],
+      lastName: ['', [Validators.required, Validators.minLength(4)]],
+      email:['',[Validators.required, Validators.email]],
+      phone:['',[Validators.required]], 
+      password:['',[Validators.required, Validators.minLength(4)]],
+      address:['', [Validators.required, Validators.minLength(4)]],
+      city:['', [Validators.required, Validators.minLength(4)]]
     });
   }
-
-  get fg(){
-    return this.fgValidation.controls;
-
-  }
-
-  loginEvent(){
-    if(this.fgValidation.invalid){
-      
-    }
-    else{
-      let u =this.fg.username.value;
-      let p=this.fg.password.value;
-      let user=this.secService.loginUser(u,p);
-      if (user != null){
-          this.router.navigate(['/home']);
-      }
-    }
-  }
-
 }
-

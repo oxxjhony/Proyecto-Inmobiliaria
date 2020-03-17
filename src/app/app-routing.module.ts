@@ -29,6 +29,10 @@ const routes: Routes = [
     loadChildren:'./modules/administrador/administrador.module#AdministradorModule'
   },
   {
+    path:'cliente',
+    loadChildren:'./modules/cliente/cliente.module#ClienteModule'
+  },
+  {
     path:'**',
     component:PageNotFoundComponent
   },
@@ -37,6 +41,7 @@ const routes: Routes = [
     path:'asesor',
     loadChildren:'./modules/asesor/asesor.module#AsesorModule'
   }
+
 
 ];
 
