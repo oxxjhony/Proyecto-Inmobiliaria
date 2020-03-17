@@ -36,15 +36,20 @@ export class LoginComponent implements OnInit {
 
   loginEvent(){
     if(this.fgValidation.invalid){
-      
+      alert('error data');
     }
     else{
       let u =this.fg.username.value;
       let p=this.fg.password.value;
-      let user=this.secService.loginUser(u,p);
-      if (user != null){
+      let user =null;
+      this.secService.loginUser(u,p).subscribe(data=>{
+        if (data != null){
+          console.log(user);
           this.router.navigate(['/home']);
+          this.secService.saveLoginInfo(data);
       }
+      } );
+      
     }
   }
 

@@ -34,5 +34,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "inmueble": {
+    "dataSource": "BaseDatos",
+    "public": true
+  },
+  "usuario": {
+    "dataSource": "BaseDatos",
+    "public": true
+  },
+  "solicitud": {
+    "dataSource": "BaseDatos",
+    "public": true
   }
 }
