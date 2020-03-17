@@ -22,6 +22,7 @@
                   <label for="txtCode">direccion</label>
                   <div class="warning-validation" *ngIf="fv.direccion.errors  && (fv.direccion.dirty || fv.direccion.touched)">
                       <strong *ngIf="fv.direccion.errors.required">Por favor, ingrese la dirección!</strong>
+                      <strong *ngIf="fv.direccion.errors.minLength">La dirección debe tener al menos 5 caracteres</strong>
                   </div>
               </div>
               <div class="input-field col s12">
@@ -29,7 +30,8 @@
                   <label for="txtName">valor </label>
                   <div class="warning-validation" *ngIf="fv.valor.errors && (fv.valor.dirty || fv.valor.touched)">
                       <strong *ngIf="fv.valor.errors.required">Por favor, ingrese el valor!</strong>
-                     
+                      <strong *ngIf="fv.valor.errors.minLength">Debe ingresar al menos 6 cifras</strong>
+                      <strong *ngIf="fv.valor.errors.maxLength">El valor no puede superar las 11 cifras</strong>
                   </div>
               </div>
               <div class="input-field col s12">
@@ -47,11 +49,24 @@
                     <option value="2">Venta</option>
                     <option value="3">Alquiler</option>
                   </select>
-                <input id="txtName" formControlName="tipooferta" type="text" class="validate">
+                
                 <label for="txtName">tipooferta</label>
                 <div class="warning-validation" *ngIf="fv.tipooferta.errors  && (fv.tipooferta.dirty || fv.tipooferta.touched)">
                     <strong *ngIf="fv.tipooferta.errors.required">Por favor, ingrese el tipo de oferta!</strong>
                 </div>
+
+                <div class="input-field col s12">
+                    <input id="txtName" formControlName="contactoencargado" type="text" class="validate">
+                    <label for="txtName">contactoencargado </label>
+                    <div class="warning-validation" *ngIf="fv.contactoencargado.errors && (fv.contactoencargado.dirty || fv.contactoencargado.touched)">
+                        <strong *ngIf="fv.contactoencargado.errors.required">Por favor, ingrese el telefono del contacto</strong>
+                        <strong *ngIf="fv.contactoencargado.errors.minLength">Debe ingresar al menos 8 cifras</strong>
+                        
+                    </div>
+                </div>
+
+
+
             </div>
               
            

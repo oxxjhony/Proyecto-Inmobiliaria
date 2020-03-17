@@ -21,6 +21,11 @@ export class CrearInmuebleComponent implements OnInit {
     return this.formValidator.controls;
   }
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+
   formGenerator() {
     this.formValidator = this.fb.group({
       departamento: ['', [Validators.required]],
